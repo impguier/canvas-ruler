@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+    <div id="app">
+        <form action="" id="form">
+            <label for="">
+            per:
+                <input type="number" name="per" placeholder="per"/>
+            </label> 
+            <label for="">
+            lineWidth:   
+                <input type="number" name="lineWidth" placeholder="lineWidth"/>
+            </label>
+            <label for="">
+            unit: 
+            <input type="number" name="unit" placeholder="unit"/>
+            </label>
+            <label for="">
+            scale: 
+            <input type="number" name="scale" placeholder="scale"/>
+            </label>
+            <label for="">
+            init: 
+            <input type="number" name="init" placeholder="init"/> 
+            </label>  
+            <button id="submit" type="button" onclick="submit()">Submit</button>      
+        </form>    
+    </div>
+    <script>
+        var $submit = document.querySelector('#submit');
+        $submit.addEventListener('click',function(){
+            var $form = document.querySelector('#form')
+            var obj = {
+                per: +$form['per'].value,
+                lineWidth: +$form['lineWidth'].value,
+                unit: +$form['unit'].value,
+                scale: +$form['scale'].value,
+                init: +$form['init'].value
+            }
+            rule.setOptions( obj )
+        })
+    </script>
+    <script src="/dist/main.js"></script>
+</body>
+</html>
