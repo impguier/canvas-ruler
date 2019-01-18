@@ -31,6 +31,6 @@
                 init: 500
             }})
         rule.paint()
-![canvas-ruler](https://github.com/impguier/canvas-ruler/canvas-ruler.png)       
+![canvas-ruler](https://github.com/impguier/canvas-ruler/blob/master/canvas-ruler.png)       
 #### 恳求
 有bug或者觉得有更好的实现，望不吝赐教，么么哒
