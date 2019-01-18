@@ -2,10 +2,14 @@
   "name": "canvas-ruler",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server --inline --hot"
+    "start": "webpack-dev-server --mode development --inline --hot",
+    "dev":"webpack --mode development --config webpack.config.js",
+    "build": "webpack --mode production --config webpack.config.prod.js",
+    "lint": "npx eslint src",
+    "lint:fix": "npx eslint src --fix"
   },
   "keywords": [
     "canvas",
@@ -20,7 +24,17 @@
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.2.3",
     "babel-loader": "^8.0.5",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.12.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "terser-webpack-plugin": "^1.2.1",
     "webpack": "^4.28.4",
-    "webpack-cli": "^3.2.1"
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14",
+    "webpack-merge": "^4.2.1"
   }
 }

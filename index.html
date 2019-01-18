@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <style>
-    </style>
 </head>
 <body>
     <div id="app">
@@ -34,6 +32,7 @@
             <button id="submit" type="button" onclick="submit()">Submit</button>      
         </form>    
     </div>
+    <script src="./dist/ruler.min.js"></script>
     <script>
         var $submit = document.querySelector('#submit');
         $submit.addEventListener('click',function(){
@@ -47,7 +46,24 @@
             }
             rule.setOptions( obj )
         })
-    </script>
-    <script src="/dist/main.js"></script>
+        var rule = new Ruler({
+            width: 1000,
+            height: 250,
+            id: 'love',
+            selector: '#app',
+            info: {
+                /* per              每一个格子的间隔
+                * lineWidth        每一个格子的宽度  
+                * unit             每一个格子的值
+                * scale            刻度
+                */
+                per: 10,
+                lineWidth: 2,        
+                unit: 10,
+                scale: 10,
+                init: 500
+            }})
+        rule.paint()   
+    </script>    
 </body>
 </html>
