@@ -2,10 +2,10 @@
 
 [![js-standard-style](https://cdn.rawgit.com/standard/standard/master/badge.svg)](http://standardjs.com)
 
-####第一期：
+#### 第一期：
 - [x] 画一个标尺
 - [x] 数字位置联动
-####第二期
+#### 第二期
 - [ ] 滑动数字联动
 - [ ] PC&移动   
 
